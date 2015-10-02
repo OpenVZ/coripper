@@ -1,0 +1,21 @@
+.TH coripper 8 "August 2015" "OpenVZ"
+.SH NAME
+Utility for shrinking coredump files in ELF format by removing data unnecessary for backtrace generation.
+
+.SH SYNOPSIS
+.B coripper <\fIpath\fR>
+
+.SH DESCRIPTION
+The \fBcoripper\fP utility reads a coredump file in ELF format and outputs a new coredump file with the following data: NOTE segment, stack segments, .dynamic and .rdebug sections from the executable, linkmap list data.
+
+.SH OUTPUT
+\fBcoripper\fP writes the resulting coredump file to standard output.
+
+.SH RETURN CODE
+Returns 0 upon success.
+
+.SH SEE ALSO
+.BR core (5).
+
+.SH COPYRIGHT
+Copyright (c) 2015-2015 Parallels IP Holdings GmbH. All rights reserved.
