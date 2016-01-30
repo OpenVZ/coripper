@@ -27,6 +27,7 @@ coripper: coripper.o core_segments.o core_reader.o main.cpp
 	$(CPP) $(CPPFLAGS) $(INC) -c $< -o $@
 
 install:
+	$(INSTALL) -d $(BINDIR)
 	$(INSTALL) coripper $(BINDIR)/coripper
 
 depend-cpp:
