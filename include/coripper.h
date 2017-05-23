@@ -34,6 +34,9 @@ namespace CoRipper
 struct Core
 {
 	bool read(const char*);
+	~Core()
+	{
+	}
 
 private:
 	friend std::ostream& operator<<(std::ostream& sout, const Core& c);

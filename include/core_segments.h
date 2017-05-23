@@ -327,6 +327,10 @@ struct Builder
 	{
 	}
 
+	~Builder()
+	{
+	}
+
 	bool getResult(data_t& dst_);
 	bool readNote();
 	bool readDynamic();
