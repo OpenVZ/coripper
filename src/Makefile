@@ -2,7 +2,8 @@ INSTALL = install
 BINDIR = $(DESTDIR)/usr/bin
 
 CPP = g++
-CPPFLAGS = -pipe -Werror -Wall -Wextra -Winline -Wcast-align -Wno-unused-parameter -Wunused-variable -g2
+CPPFLAGS += -pipe -Werror -Wall -Wextra -Winline -Wcast-align -Wno-unused-parameter -Wunused-variable -g2
+LDFLAGS += -lelf
 INC = -I../include
 
 default: all
@@ -21,7 +22,7 @@ debug: .stamp-debug coripper
 all: .stamp-cpp coripper
 
 coripper: coripper.o core_segments.o core_reader.o main.cpp
-	$(CPP) $(CPPFLAGS) $(INC) main.cpp *.o -lelf -o $@
+	$(CPP) $(CPPFLAGS) $(INC) main.cpp *.o $(LDFLAGS) -o $@
 
 %.o: %.cpp
 	$(CPP) $(CPPFLAGS) $(INC) -c $< -o $@
