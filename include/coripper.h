@@ -33,6 +33,10 @@ namespace CoRipper
 
 struct Core
 {
+	~Core()
+	{
+	}
+
 	bool read(const char*);
 
 private:
