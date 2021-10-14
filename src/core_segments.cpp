@@ -24,6 +24,7 @@
 #include <core_segments.h>
 #include <cstring>
 #include <boost/foreach.hpp>
+#include <ostream>
 
 namespace CoRipper
 {
